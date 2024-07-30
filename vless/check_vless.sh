@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ANSI颜色码
-GREEN='\033[0;32m'
+GREEN='\033[0;32m'  
 NC='\033[0m'  # 恢复默认颜色
 
 # 输出绿色的 "YI XIU"
@@ -27,7 +27,7 @@ output_yi_xiu() {
 # Function to generate a UUID
 generate_uuid() {
     for i in {1..3}; do
-        uuid=$(uuidgen)
+        uuid=$(uuidgen)      
         if [[ -n "$uuid" ]]; then
             echo "$uuid"
             return
@@ -35,17 +35,17 @@ generate_uuid() {
     done
 
     # 预定义的UUID列表
-    predefined_uuids=(
-        "fb210b24-46dd-4b4c-92ce-097385945dad"
-        "53cfcb07-8c25-4c25-baaa-95b4b50871a2"
-        "445ae56f-727d-495e-9c88-cbe942d144a6"
-        "078eb39d-2094-4272-b221-782ba0520dd6"
-        "5826e9cc-c5b7-49ca-8b37-a0ea68f382cc"
-        "e79fda4a-9519-4ef3-8973-130801b3d0ae"
-        "c0422b3b-00aa-4dbe-8573-6fb15d49e557"
-        "907e3ac9-02de-47fe-b40c-c2bd912c3adf"
-        "c53ca34c-8d9c-4a7e-8b44-5da52e4b5eaa"
-        "73fc0a2d-2458-435b-92aa-b4e8e3e40944"
+    predefined_uuids=(      
+        "34a00cf3-9ca1-42bf-ada6-47f910095ef8"
+        "ee868de8-3042-4745-9c9c-1b8545664489"
+        "bce83b42-510c-4c7d-b849-d91b081229cd"
+        "f3e6fd0d-eedd-4019-916d-5a306be664b4"
+        "99841b72-6eac-4902-9d9d-1341414b34b0"
+        "2559ef95-2059-47f3-9297-248853095d66"
+        "82a727d8-738a-4e60-bd2e-e62f9d7b1e30"
+        "3f3d8352-dd9e-427d-9140-a627af7178eb"
+        "f2404f35-4537-49e8-9e9a-967f53b330f8"
+        "5d3b891e-eae0-4f22-b10f-b8357b629277"
     )
     uuid=${predefined_uuids[$RANDOM % ${#predefined_uuids[@]}]}
     echo "$uuid"
